@@ -1,0 +1,27 @@
+{
+  "name": "tsa-basics",
+  "version": "1.0.0",
+  "description": "Basic tiles for Tiny Sandbox.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tiny-Sandbox/Basics.git"
+  },
+  "author": "haykam821",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Tiny-Sandbox/Basics/issues"
+  },
+  "homepage": "https://github.com/Tiny-Sandbox/Basics#readme",
+  "devDependencies": {
+    "eslint": "^4.19.1",
+    "eslint-config-haykam": "^1.0.1"
+  },
+  "dependencies": {
+    "chroma-js": "^1.3.7",
+    "performance-now": "^2.1.0"
+  }
+}
