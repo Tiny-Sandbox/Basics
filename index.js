@@ -58,9 +58,9 @@ class Space {
 		return;
 	}
 
-	changeBack() {
+	changeBack(arenaMap) {
 		if (this.oldTile) {
-			this.changeTo(this.oldTile);
+			this.changeTo(this.oldTile, arenaMap);
 			return true;
 		} else {
 			return false;
@@ -166,7 +166,7 @@ class PowerSource extends Wall {
 function indicatorRendering(expression) {
 	return expression ? {
 		type: "image",
-		// image: indOn,
+		// Image: indOn,
 	} : {
 		type: "color",
 		color: "#4b3621",
@@ -221,7 +221,7 @@ class Teleporter extends Space {
 		const exitTile = arenaMap.getTile(exit.position.x, exit.position.y);
 
 		plTile.changeBack();
-		exitTile.changeTo(plTile);
+		exitTile.changeTo(plTile, arenaMap);
 
 		players[player.id].position.x = exit.position.x;
 		players[player.id].position.y = exit.position.y;
@@ -343,7 +343,7 @@ const directions = [
 ];
 
 class DirectionalWall extends Wall {
-	// this type of wall only collides in one direction
+	// This type of wall only collides in one direction
 	constructor(direction, x, y) {
 		super(x, y);
 
@@ -361,7 +361,7 @@ class DirectionalWall extends Wall {
 }
 
 class ToggleableWall extends Wall {
-	// this type of wall can be toggled for collision, but starts out closed
+	// This type of wall can be toggled for collision, but starts out closed
 	constructor(x, y) {
 		super(x, y);
 
